@@ -4,7 +4,6 @@ html {
 
 .nav-text {
   text-decoration: none;
-  padding-left: .5em;
   color: #AEAFB0;
 }
 
@@ -16,4 +15,12 @@ body div:first-child {
   position: fixed;
   top:0;
   bottom:0;
+}
+
+.mobile-nav ul li a:hover {
+  background-color: #4EAAAA;
+}
+
+.long-logo {
+  max-width: 18em;
 }
