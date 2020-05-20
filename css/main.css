@@ -1,1 +1,19 @@
+html {
+  font-family: 'Avenir';
+}
 
+.nav-text {
+  text-decoration: none;
+  padding-left: .5em;
+  color: #AEAFB0;
+}
+
+.nav-text:hover {
+  color: #3C8C8C;
+}
+
+body div:first-child {
+  position: fixed;
+  top:0;
+  bottom:0;
+}
