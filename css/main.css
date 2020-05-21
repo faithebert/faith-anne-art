@@ -87,21 +87,20 @@ img {
   display: none;
 }
 
-@media only screen and (min-width: 38em) {
-
-  html, body {
-    height: 100%;
-  }
-
-  .web-nav {
-    height: 100%;
-  }
-
-  main {
-    background-color: #E6F0F2;
-  }
-
+footer {
+  background-color: #E2FFFF;
 }
+
+footer .footer-nav li a {
+  display: block;
+  background-color: #E2FFFF;
+}
+
+footer ul li a:hover {
+  background-color: #fff;
+  color: #3C8C8C;
+}
+
 
 @media only screen and (min-width: 25em) {
   .paw {
@@ -114,6 +113,25 @@ img {
 
   .paw img {
     max-height: 10em;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+
+  html, body {
+    height: 100%;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .web-nav {
+    height: 100%;
+  }
+
+  main {
+    background-color: #E6F0F2;
   }
 
 }
