@@ -124,6 +124,18 @@ footer ul li a:hover {
   outline: none;
   display: block;
 }
+
+.photo {
+  height: 10em;
+  overflow: hidden;
+  width: 25%;
+}
+
+.photo a img {
+  width: 200px; /* width of container */
+  height: 200px; /* height of container */
+  object-fit: cover;
+}
 /*END OF GALLERY*/
 
 @media only screen and (min-width: 25em) {
