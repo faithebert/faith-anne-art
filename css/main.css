@@ -17,8 +17,15 @@ body div:first-child {
   bottom:0;
 }
 
-.mobile-nav ul li a:hover {
+.mobile-nav ul li a {
+  background-color: #CDEBF1;
+  display: block;
+  color: #3C8C8C;
+}
+
+.mobile-nav a:hover {
   background-color: #4EAAAA;
+  color: #fff;
 }
 
 .long-logo {
