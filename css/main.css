@@ -128,13 +128,18 @@ footer ul li a:hover {
 .photo {
   height: 10em;
   overflow: hidden;
-  width: 25%;
 }
 
 .photo a img {
-  width: 200px; /* width of container */
-  height: 200px; /* height of container */
+  width: 100%; /* width of container */
+  height: 10em;; /* height of container */
   object-fit: cover;
+  object-position: 100% 0;
+}
+
+.sit-dog a img {
+  object-fit: cover;
+  object-position: 0 25%;
 }
 /*END OF GALLERY*/
 
@@ -168,6 +173,17 @@ footer ul li a:hover {
 
   main {
     background-color: #E6F0F2;
+  }
+
+  .photo a img {
+    width: 100%; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
+  }
+
+  .photo {
+    height: 10em;
+    overflow: hidden;
   }
 
 }
