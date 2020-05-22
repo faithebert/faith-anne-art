@@ -101,6 +101,17 @@ footer ul li a:hover {
   color: #3C8C8C;
 }
 
+.web {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  display:inline-block;
+
+}
+
+.full {
+  height: 100%;
+}
 /*GALLERY*/
 .lightbox {
   display: none;
@@ -137,9 +148,24 @@ footer ul li a:hover {
   object-position: 100% 0;
 }
 
+.large-photo a img {
+  width: 100%; /* width of container */
+  height: 10em;; /* height of container */
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
 .sit-dog a img {
   object-fit: cover;
   object-position: 0 25%;
+}
+.angel a img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery {
+  max-height: 350px;
 }
 /*END OF GALLERY*/
 
@@ -155,6 +181,7 @@ footer ul li a:hover {
   .paw img {
     max-height: 10em;
   }
+
 }
 
 @media only screen and (min-width: 38em) {
@@ -165,10 +192,6 @@ footer ul li a:hover {
 
   footer {
     display: none;
-  }
-
-  .web-nav {
-    height: 100%;
   }
 
   main {
@@ -184,6 +207,17 @@ footer ul li a:hover {
   .photo {
     height: 10em;
     overflow: hidden;
+  }
+
+  .large-photo {
+    height: 20em;
+  }
+
+  .large-photo a img {
+    width: 100%; /* width of container */
+    height: 20em; /* height of container */
+    object-fit: cover;
+    object-position: 100% 0;
   }
 
 }
