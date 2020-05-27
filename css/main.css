@@ -167,6 +167,7 @@ footer ul li a:hover {
 .gallery {
   max-height: 350px;
 }
+
 /*END OF GALLERY*/
 
 @media only screen and (min-width: 25em) {
@@ -231,4 +232,18 @@ footer ul li a:hover {
     object-position: 100% 0;
   }
 
+}
+
+@media only screen and (min-width: 38em) {
+  .tall-photo {
+    height: 25em;
+    overflow: hidden;
+  }
+
+  .tall-photo a img {
+    width: 100%; /* width of container */
+    height: 25em;; /* height of container */
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 }
