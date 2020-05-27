@@ -168,6 +168,17 @@ footer ul li a:hover {
   max-height: 350px;
 }
 
+.xl-photo {
+  height: 100%;
+}
+
+.xl-photo a img {
+  width: 100%; /* width of container */
+  height: 20em; /* height of container */
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
 /*END OF GALLERY*/
 
 @media only screen and (min-width: 25em) {
@@ -221,17 +232,6 @@ footer ul li a:hover {
     object-position: 100% 0;
   }
 
-  .xl-photo {
-    height: 20em;
-  }
-
-  .xl-photo a img {
-    width: 100%; /* width of container */
-    height: 20em; /* height of container */
-    object-fit: cover;
-    object-position: 100% 0;
-  }
-
 }
 
 @media only screen and (min-width: 38em) {
@@ -245,5 +245,16 @@ footer ul li a:hover {
     height: 25em;; /* height of container */
     object-fit: cover;
     object-position: 50% 50%;
+  }
+
+  .xl-photo {
+    height: 30em;
+  }
+
+  .xl-photo a img {
+    width: 100%; /* width of container */
+    height: 100%; /* height of container */
+    object-fit: cover;
+    object-position: 100% 0;
   }
 }
