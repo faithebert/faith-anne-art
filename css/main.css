@@ -113,6 +113,27 @@ footer ul li a:hover {
   height: 100%;
 }
 
+.button {
+  background-color: #E2FFFF;
+  color: #3C8C8C;
+  border: 2px solid #3C8C8C;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #3C8C8C;
+  color: #E2FFFF;
+}
+
+.top-row {
+  background-color: #E2FFFF;
+}
+
+tbody tr th {
+  color: #3C8C8C;
+}
+
 @media only screen and (min-width: 25em) {
   .paw {
     display: inline;
