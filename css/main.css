@@ -130,6 +130,10 @@ footer ul li a:hover {
   background-color: #E2FFFF;
 }
 
+.special-row {
+  background-color: #F0FFFF;
+}
+
 tbody tr th {
   color: #3C8C8C;
 }
