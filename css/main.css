@@ -134,6 +134,14 @@ tbody tr th {
   color: #3C8C8C;
 }
 
+.form {
+  background-color: #E2FFFF;
+}
+
+.form input, select, textarea {
+  border-color: #3C8C8C;
+}
+
 @media only screen and (min-width: 25em) {
   .paw {
     display: inline;
