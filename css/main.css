@@ -142,8 +142,16 @@ tbody tr th {
   background-color: #E2FFFF;
 }
 
+.about {
+  background-color: #F0FEFF;
+}
+
 .form input, select, textarea {
   border-color: #3C8C8C;
+}
+
+.blue {
+  color: #3C8C8C;
 }
 
 .top {
@@ -151,6 +159,33 @@ tbody tr th {
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
+}
+
+.about {
+  text-align: center;
+}
+
+.border {
+  border: 3px solid #CDEBF1;
+}
+
+.single-before {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.single-before li {
+  padding-left: 1rem;
+  text-indent: -.1rem;
+}
+
+.single-before li::before {
+  content: "✏";
+}
+
+hr {
+  border: 2px solid #3C8C8C;
 }
 
 @media only screen and (min-width: 25em) {
@@ -180,6 +215,10 @@ tbody tr th {
 
   main {
     background-color: #F0FFFF;
+  }
+
+  .about {
+    text-align: left;
   }
 
 }
