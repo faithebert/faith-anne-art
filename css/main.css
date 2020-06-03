@@ -221,4 +221,8 @@ hr {
     text-align: left;
   }
 
+  .pad {
+    margin-right: 1.5em;
+  }
+
 }
