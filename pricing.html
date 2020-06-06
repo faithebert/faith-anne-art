@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="https://use.typekit.net/xss2ipw.css">
 </head>
 <body id="top">
+
+  <ul class="skip-links">
+    <li><a href="#main">Jump to main content</a></li>
+    <li><a href="#prices">Jump to drawing prices</a></li>
+    <li><a href="#products">Jump to other products</a></li>
+    <li><a href="#order">Jump to place an order</a></li>
+  </ul>
+
   <div class="grid">
     <div class="unit fixed xs-0 m-1-4 unit-content-center-vertical height-win-full">
       <nav role="navigation" class="text-upper milli island-1-2">
@@ -83,30 +91,31 @@
         <div class="grid unit-content-center-horizontal">
           <div class="unit island-1-4 xs-1-2 m-1-4 pad">
             <a href="#commissions">
-              <img class="img-flex" src="images/product-1.png" alt="">
+              <img class="img-flex" src="images/product-1.png" alt="Clickable link to jump to commission prices table">
             </a>
           </div>
           <div class="unit island-1-4 xs-1-2 m-1-4 pad">
             <a href="#cards">
-              <img class="img-flex" src="images/product-2.png" alt="">
+              <img class="img-flex" src="images/product-2.png" alt="Clickable link to jump to cards">
             </a>
           </div>
           <div class="unit island-1-4 xs-1-2 m-1-4">
             <a href="#prints">
-              <img class="img-flex" src="images/product-3-V2.png" alt="">
+              <img class="img-flex" src="images/product-3-V2.png" alt="Clickable link to jump to prints">
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="unit xs-1 unit-offset-m-1-4 m-3-4 island-1-2">
+    <div id="main" class="unit xs-1 unit-offset-m-1-4 m-3-4 island-1-2">
       <table id="commissions" class="push">
         <div class="text-center">
           <h1 class="tk-texas-hero not-bold nina">Commission Prices</h1>
-          <caption class="milli">*commission prices are subject to change and are ultimately up to the artist, depending on a photo by photo basis - the table below provides a rough estimation on <span class="bold">graphite</span> drawings - other sizes available upon request</caption>
+          <caption class="visually-hidden">Data table with prices of graphite drawings corresponding with how many animals are in each drawing</caption>
+          <p class="milli">*commission prices are subject to change and are ultimately up to the artist, depending on a photo by photo basis - the table below provides a rough estimation on <span class="bold">graphite</span> drawings - other sizes available upon request</p>
         </div>
-        <thead>
+        <thead id="prices">
           <tr class="top-row">
             <th role="presentation" scope="col">
               <i class="icon i-48">
@@ -162,24 +171,25 @@
     </div>
 
     <div class="grid unit unit-offset-m-1-4 island-1-4 unit-content-center-horizontal">
+      <h2 id="products" class="tk-texas-hero not-bold nina">Other Products</h1>
       <div class="unit xs-1 text-center">
         <h2 id="cards" class="push-0 text-upper">Cards</h2>
         <p>$5\ea or 3 for $10</p>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 nano text-center">
-        <img class="img-flex" src="images/card-1.png" alt="">
+        <img class="img-flex" src="images/card-1.png" alt="Card with upper portion of husky face with eyes the focus">
         <caption>5" x 3.5" Dog Eyes Blank Card</caption>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 nano text-center">
-        <img class="img-flex" src="images/card-4.png" alt="">
+        <img class="img-flex" src="images/card-4.png" alt="Closeup drawing of white cat's face on a card">
         <caption>5" x 3.5" Cat Blank Card</caption>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 nano text-center">
-        <img class="img-flex" src="images/card-2.png" alt="">
+        <img class="img-flex" src="images/card-2.png" alt="Card with drawing of a deer">
         <caption>4" x 5.5" Deer Blank Card</caption>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 nano text-center push">
-        <img class="img-flex" src="images/card-3.png" alt="">
+        <img class="img-flex" src="images/card-3.png" alt="Closeup of a black lab nose on a card">
         <caption>4" x 5.5" Dog Nose Blank Card</caption>
       </div>
       <div class="unit xs-1 text-center">
@@ -187,22 +197,22 @@
         <p>Large: $8 Small: $5</p>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 nano text-center">
-        <img class="img-flex" src="images/large-print-dog+horse.png" alt="">
+        <img class="img-flex" src="images/large-print-dog+horse.png" alt="Horse and dog nose to nose in a barn drawing as a landscape print">
         <caption>8.5" x 11" Large Horse & Dog Signed Print</caption>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 nano text-center">
-        <img class="img-flex" src="images/large-print-horses.png" alt="">
+        <img class="img-flex" src="images/large-print-horses.png" alt="4 mulit-coloured horses on a landscape print">
         <caption>8.5" x 11" Large Horses Signed Print</caption>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 nano text-center">
-        <img class="img-flex" src="images/small-print-cats.png" alt="">
+        <img class="img-flex" src="images/small-print-cats.png" alt="Two multi-coloured cats sitting atop each other in a chair drawing as a portrait print">
         <caption>5" x 7" Small Cats Signed Print</caption>
       </div>
       <div class="unit xs-1-2 l-1-4 island-1-4 push nano text-center">
-        <img class="img-flex" src="images/small-print-dog.png" alt="">
+        <img class="img-flex" src="images/small-print-dog.png" alt="Smiling german shepherd drawing as a portrait print">
         <caption>5" x 7" German Shepherd Signed Print</caption>
       </div>
-      <div class="unit unit-content-center-horizontal push">
+      <div id="order" class="unit unit-content-center-horizontal push">
         <a class="button island-1-2 gutter-2" href="order.html" target="_blank">Buy Now</a>
       </div>
     </div>
@@ -210,7 +220,7 @@
     <div class="top">
       <i class="icon i-48">
         <a href="#top">
-          <img class="img-flex" src="icons/arrow.png" alt="Dog paw icon">
+          <img class="img-flex" src="icons/arrow.png" alt="Arrow icon to return to top of page">
         </a>
       </i>
     </div>
@@ -219,7 +229,7 @@
 
   </div>
 
-  <footer class="island-1-2 relative">
+  <footer role="contentinfo" class="island-1-2 relative">
     <div class="grid grid-stretch">
       <div class="unit xs-1-2 m-0">
         <ul class="list-group text-upper nano footer-nav push-0">
