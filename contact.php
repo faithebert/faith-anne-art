@@ -1,12 +1,54 @@
 <?php
+  $name = $_POST['name'];
+  $visitor_email = $_POST['email'];
+  $message = $_POST['message'];
+  $photo = $_POST['photo'];
+  $inquiry = $_POST['inquiry'];
 
-if($_POST["message"]) {
+  $email_from = $visitor_email;
 
-mail("faithanneart@gmail.com", "Here is the subject line",
+	$email_subject = "New Form submission";
 
-$_POST["insert your message here"]. "From: an@email.address");
+	$email_body = "You have received a new message from the user $name.\n".
+                            "Here is the message:\n $message". "They want: $inquiry" $photo
 
-}
+                            $to = "faithanneart@gmail.com";
+
+                             $headers = "From: $email_from \r\n";
+
+                             $headers .= "Reply-To: $visitor_email \r\n";
+
+                             mail($to,$email_subject,$email_body,$headers)
+
+                             function IsInjected($str)
+                             {
+                                 $injections = array('(\n+)',
+                                        '(\r+)',
+                                        '(\t+)',
+                                        '(%0A+)',
+                                        '(%0D+)',
+                                        '(%08+)',
+                                        '(%09+)'
+                                        );
+
+                                 $inject = join('|', $injections);
+                                 $inject = "/$inject/i";
+
+                                 if(preg_match($inject,$str))
+                                 {
+                                   return true;
+                                 }
+                                 else
+                                 {
+                                   return false;
+                                 }
+                             }
+
+                             if(IsInjected($visitor_email))
+                             {
+                                 echo "Bad email value!";
+                                 exit;
+                             }
 
 ?>
 
@@ -94,20 +136,20 @@ $_POST["insert your message here"]. "From: an@email.address");
           <h1 class="roboto gutter-1-2 tk-texas-hero not-bold nina">Get in Touch</h1>
           <p></p>
         </section>
-        <form role="search" class="unit" id="form" method="POST" action= "contact.php">
+        <form name="myemailform" role="search" class="unit" id="form" method="POST" action= "contact.php">
           <h2 class="visually-hidden">Form to contact Faith Anne of Faith Anne Art and Portraits</h2>
           <div class="grid milli">
             <div class="push unit xs-1 m-1-2 gutter-1-2">
               <label>Name</label>
-              <input>
+              <input name="name">
             </div>
             <div class="push unit xs-1 m-1-2 gutter-1-2">
               <label>Email</label>
-              <input type="email" required>
+              <input name="email" type="email" required>
             </div>
             <div class="push unit xs-1 m-1-2 gutter-1-2 ">
               <label>Inquiry</label>
-              <select>
+              <select name="inquiry">
                 <option>Place an Order</option>
                 <option>Ask a Question</option>
                 <option>Other</option>
@@ -115,11 +157,11 @@ $_POST["insert your message here"]. "From: an@email.address");
             </div>
             <div class="push unit xs-1 m-1-2 gutter-1-2">
               <label>Upload Pet Photo</label>
-              <input type="file" accept="image/png, image/jpeg">
+              <input name="photo" type="file" accept="image/png, image/jpeg">
             </div>
             <div class="push unit xs-1 gutter-1-2">
               <label>Message</label>
-              <textarea name="name" rows="8" cols="80" required></textarea>
+              <textarea name="message" rows="8" cols="80" required></textarea>
             </div>
             <div class="center-content gutter-1-2">
               <button class="island-1-2 gutter-2 text-upper" type="submit">Submit</button>
