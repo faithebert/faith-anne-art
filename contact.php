@@ -1,55 +1,21 @@
 <?php
-  $name = $_POST['name'];
-  $visitor_email = $_POST['email'];
-  $message = $_POST['message'];
-  $photo = $_POST['photo'];
-  $inquiry = $_POST['inquiry'];
+if(isset($_POST['submit'])){
+    $to = "email@example.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
-  $email_from = $visitor_email;
-
-	$email_subject = "New Form submission";
-
-	$email_body = "You have received a new message from the user $name.\n".
-                            "Here is the message:\n $message". "They want: $inquiry" $photo
-
-                            $to = "faithanneart@gmail.com";
-
-                             $headers = "From: $email_from \r\n";
-
-                             $headers .= "Reply-To: $visitor_email \r\n";
-
-                             mail($to,$email_subject,$email_body,$headers)
-
-                             function IsInjected($str)
-                             {
-                                 $injections = array('(\n+)',
-                                        '(\r+)',
-                                        '(\t+)',
-                                        '(%0A+)',
-                                        '(%0D+)',
-                                        '(%08+)',
-                                        '(%09+)'
-                                        );
-
-                                 $inject = join('|', $injections);
-                                 $inject = "/$inject/i";
-
-                                 if(preg_match($inject,$str))
-                                 {
-                                   return true;
-                                 }
-                                 else
-                                 {
-                                   return false;
-                                 }
-                             }
-
-                             if(IsInjected($visitor_email))
-                             {
-                                 echo "Bad email value!";
-                                 exit;
-                             }
-
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
 ?>
 
 <!DOCTYPE html>
