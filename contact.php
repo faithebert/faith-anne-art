@@ -1,3 +1,15 @@
+<?php
+
+if($_POST["message"]) {
+
+mail("faithanneart@gmail.com", "Here is the subject line",
+
+$_POST["insert your message here"]. "From: an@email.address");
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -82,7 +94,7 @@
           <h1 class="roboto gutter-1-2 tk-texas-hero not-bold nina">Get in Touch</h1>
           <p></p>
         </section>
-        <form role="search" class="unit" id="form" method="POST" action= "mailto:faithanneart@gmail.com">
+        <form role="search" class="unit" id="form" method="POST" action= "contact.php">
           <h2 class="visually-hidden">Form to contact Faith Anne of Faith Anne Art and Portraits</h2>
           <div class="grid milli">
             <div class="push unit xs-1 m-1-2 gutter-1-2">
