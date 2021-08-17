@@ -2,6 +2,12 @@ html {
   background-color: #ecf7fb;
 }
 
+div {
+  width: 100%;
+}
+
 img {
   margin: auto;
+  width: 100%;
+  min-width: 600px;
 }
